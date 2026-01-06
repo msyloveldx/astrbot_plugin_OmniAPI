@@ -6,6 +6,7 @@ from astrbot.api import logger
 from astrbot.api.message_components import Video, Plain, At, Record, Image
 import httpx
 
+from .astrbot_help_generator import generate_help_image
 from .core.apiManager import APIManager
 from .core.apiHandle import APIHandle
 
@@ -221,7 +222,7 @@ class Main(Star):
             yield event.plain_result("暂无可用指令")
             return
 
-        help_text = "🌟 可用视频指令:\n"
+        help_text = "🌟 可用指令:\n"
         help_text += "──────────────\n"
 
         # 按API分组显示命令
@@ -243,5 +244,13 @@ class Main(Star):
 
         help_text += "──────────────\n"
         help_text += "发送指令即可获取对应视频内容"
+        # help_image = await self.text_to_image(help_text)
+        # yield event.image_result(help_image)
+        # yield event.plain_result(help_text)
 
-        yield event.plain_result(help_text)
+        generate_help_image(help_text, "data/help_cmd.png")
+        chain = [
+            # At(qq=event.get_sender_id()),
+            Image.fromFileSystem("data/help_cmd.png")
+        ]
+        yield event.chain_result(chain)
