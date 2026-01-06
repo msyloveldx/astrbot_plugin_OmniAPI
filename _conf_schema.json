@@ -1,0 +1,29 @@
+{
+  "enable_text": {
+    "description": "是否启用文本API",
+    "type": "bool",
+    "default": true
+  },
+  "enable_image": {
+    "description": "是否启用图片API",
+    "type": "bool",
+    "default": true
+  },
+  "enable_audio": {
+    "description": "是否启用语音API",
+    "type": "bool",
+    "default": true
+  },
+  "enable_video": {
+    "description": "是否启用视频API",
+    "type": "bool",
+    "default": true
+  },
+  "api_keys": {
+    "description": "api密钥",
+    "hint": "请在https://api.317ak.cn网站注册账号拿到密钥后填在此配置项中",
+    "type": "string",
+    "default": "",
+    "obvious_hint": true
+  }
+}

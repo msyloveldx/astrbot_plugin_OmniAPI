@@ -1,0 +1,1543 @@
+{
+  "随机视频": {
+    "name": "随机视频",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "随机视频"
+    ],
+    "url": "https://api.317ak.cn/api/jhsp",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "msg": "赵思露系",
+      "type": "json",
+      "lb": ""
+    }
+  },
+  "did": {
+    "name": "did",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "did"
+    ],
+    "url": "https://api.317ak.cn/api/sp/didjj",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": ""
+    }
+  },
+  "男大": {
+    "name": "男大",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "男大",
+      "帅哥"
+    ],
+    "url": "https://api.317ak.cn/api/sp/qcnd",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": ""
+    }
+  },
+  "久喵系列": {
+    "name": "久喵系列",
+    "type": "video",
+    "videoType": "url",
+    "command": [
+      "久喵系列"
+    ],
+    "url": "https://api.317ak.cn/api/sp/jmxl",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "json"
+    }
+  },
+  "仙桃猫系": {
+    "name": "仙桃猫系",
+    "type": "video",
+    "videoType": "url",
+    "command": [
+      "仙桃猫系"
+    ],
+    "url": "https://api.317ak.cn/api/sp/xtmx",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "json"
+    }
+  },
+  "公主花园": {
+    "name": "公主花园",
+    "type": "video",
+    "videoType": "url",
+    "command": [
+      "公主花园"
+    ],
+    "url": "https://api.317ak.cn/api/sp/gzhy",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "json"
+    }
+  },
+  "甜甜表妹": {
+    "name": "甜甜表妹",
+    "type": "video",
+    "videoType": "url",
+    "command": [
+      "甜甜表妹"
+    ],
+    "url": "https://api.317ak.cn/api/sp/ttbm",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "json"
+    }
+  },
+  "心情好好": {
+    "name": "心情好好",
+    "type": "video",
+    "videoType": "url",
+    "command": [
+      "心情好好"
+    ],
+    "url": "https://api.317ak.cn/api/sp/xqhh",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "json"
+    }
+  },
+  "小雪妹妹": {
+    "name": "小雪妹妹",
+    "type": "video",
+    "videoType": "url",
+    "command": [
+      "小雪妹妹"
+    ],
+    "url": "https://api.317ak.cn/api/sp/xxmm",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "json"
+    }
+  },
+  "红鸾姐姐": {
+    "name": "红鸾姐姐",
+    "type": "video",
+    "videoType": "url",
+    "command": [
+      "红鸾姐姐"
+    ],
+    "url": "https://api.317ak.cn/api/sp/hljj",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "json"
+    }
+  },
+  "狼宝姐姐": {
+    "name": "狼宝姐姐",
+    "type": "video",
+    "videoType": "url",
+    "command": [
+      "狼宝姐姐"
+    ],
+    "url": "https://api.317ak.cn/api/sp/lbjj",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "json"
+    }
+  },
+  "雪梨美女": {
+    "name": "雪梨美女",
+    "type": "video",
+    "videoType": "url",
+    "command": [
+      "雪梨美女"
+    ],
+    "url": "https://api.317ak.cn/api/sp/xlmn",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "json"
+    }
+  },
+  "兔兔美女": {
+    "name": "兔兔美女",
+    "type": "video",
+    "videoType": "url",
+    "command": [
+      "兔兔美女"
+    ],
+    "url": "https://api.317ak.cn/api/sp/ttmn",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "json"
+    }
+  },
+  "奶白奈奈": {
+    "name": "奶白奈奈",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "奶白奈奈"
+    ],
+    "url": "https://api.317ak.cn/api/sp/lbll",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "怼脸自拍": {
+    "name": "怼脸自拍",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "怼脸自拍"
+    ],
+    "url": "https://api.317ak.cn/api/sp/duilian",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "蜡笔小狗": {
+    "name": "蜡笔小狗",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "蜡笔小狗"
+    ],
+    "url": "https://api.317ak.cn/api/sp/lbxg",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "琳铛系列": {
+    "name": "琳铛系列",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "琳铛系列"
+    ],
+    "url": "https://api.317ak.cn/api/sp/ldxl",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "清风皓月": {
+    "name": "清风皓月",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "清风皓月"
+    ],
+    "url": "https://api.317ak.cn/api/sp/qfhy",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "惠子系列": {
+    "name": "惠子系列",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "惠子系列"
+    ],
+    "url": "https://api.317ak.cn/api/sp/hzxl",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "杂鱼川系": {
+    "name": "杂鱼川系",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "杂鱼川系"
+    ],
+    "url": "https://api.317ak.cn/api/sp/zycx",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "小瑾系列": {
+    "name": "小瑾系列",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "小瑾系列"
+    ],
+    "url": "https://api.317ak.cn/api/sp/xjxl",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "安琪系列": {
+    "name": "安琪系列",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "安琪系列"
+    ],
+    "url": "https://api.317ak.cn/api/sp/aqxl",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "吧啦鲨系": {
+    "name": "吧啦鲨系",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "吧啦鲨系"
+    ],
+    "url": "https://api.317ak.cn/api/sp/blsx",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "Yume系列": {
+    "name": "Yume系列",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "Yume系列"
+    ],
+    "url": "https://api.317ak.cn/api/sp/yexl",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "蛋儿系列": {
+    "name": "蛋儿系列",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "蛋儿系列"
+    ],
+    "url": "https://api.317ak.cn/api/sp/dexl",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "KIKI系列": {
+    "name": "KIKI系列",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "KIKI系列"
+    ],
+    "url": "https://api.317ak.cn/api/sp/kkxl",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "桥本环菜": {
+    "name": "桥本环菜",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "桥本环菜"
+    ],
+    "url": "https://api.317ak.cn/api/sp/qbhc",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "燕酱系列": {
+    "name": "燕酱系列",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "燕酱系列"
+    ],
+    "url": "https://api.317ak.cn/api/sp/yjxl",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "少萝系列": {
+    "name": "少萝系列",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "少萝系列"
+    ],
+    "url": "https://api.317ak.cn/api/sp/slxl",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "女大系列": {
+    "name": "女大系列",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "女大系列"
+    ],
+    "url": "https://api.317ak.cn/api/sp/ndxl",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "自拍视频": {
+    "name": "自拍视频",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "自拍视频"
+    ],
+    "url": "https://api.317ak.cn/api/sp/zpsp",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "吊带视频": {
+    "name": "吊带视频",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "吊带视频"
+    ],
+    "url": "https://api.317ak.cn/api/sp/ddsp",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "美女穿搭": {
+    "name": "美女穿搭",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "美女穿搭"
+    ],
+    "url": "https://api.317ak.cn/api/sp/mncd",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "热舞系列": {
+    "name": "热舞系列",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "热舞系列"
+    ],
+    "url": "https://api.317ak.cn/api/sp/rwxl",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "双马尾系": {
+    "name": "双马尾系",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "双马尾系"
+    ],
+    "url": "https://api.317ak.cn/api/sp/smwx",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "渔网系列": {
+    "name": "渔网系列",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "渔网系列"
+    ],
+    "url": "https://api.317ak.cn/api/sp/ywxl",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "少萝妹妹": {
+    "name": "少萝妹妹",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "少萝妹妹"
+    ],
+    "url": "https://api.317ak.cn/api/sp/slmm",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "拜托前辈": {
+    "name": "拜托前辈",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "拜托前辈"
+    ],
+    "url": "https://api.317ak.cn/api/sp/btqb",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "穿搭系列": {
+    "name": "穿搭系列",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "穿搭系列"
+    ],
+    "url": "https://api.317ak.cn/api/sp/cdxl",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "纯情女高": {
+    "name": "纯情女高",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "纯情女高"
+    ],
+    "url": "https://api.317ak.cn/api/sp/cqng",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "极品狱卒": {
+    "name": "极品狱卒",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "极品狱卒"
+    ],
+    "url": "https://api.317ak.cn/api/sp/jpyz",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "鞠婧祎系": {
+    "name": "鞠婧祎系",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "鞠婧祎系"
+    ],
+    "url": "https://api.317ak.cn/api/sp/jjyx",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "周扬青系": {
+    "name": "周扬青系",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "周扬青系"
+    ],
+    "url": "https://api.317ak.cn/api/sp/zyqx",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "玉足美腿": {
+    "name": "玉足美腿",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "玉足美腿"
+    ],
+    "url": "https://api.317ak.cn/api/sp/yzmt",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "潇潇系列": {
+    "name": "潇潇系列",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "潇潇系列"
+    ],
+    "url": "https://api.317ak.cn/api/sp/xxxl",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "甜妹系列": {
+    "name": "甜妹系列",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "甜妹系列"
+    ],
+    "url": "https://api.317ak.cn/api/sp/tmxl",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "清纯系列": {
+    "name": "清纯系列",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "清纯系列"
+    ],
+    "url": "https://api.317ak.cn/api/sp/qcxl",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "慢摇系列": {
+    "name": "慢摇系列",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "慢摇系列"
+    ],
+    "url": "https://api.317ak.cn/api/sp/myxl",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "漫画芋系": {
+    "name": "漫画芋系",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "漫画芋系"
+    ],
+    "url": "https://api.317ak.cn/api/sp/mhyx",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "COS系列": {
+    "name": "COS系列",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "COS系列"
+    ],
+    "url": "https://api.317ak.cn/api/sp/cosxl",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "晴天推荐": {
+    "name": "晴天推荐",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "晴天推荐"
+    ],
+    "url": "https://api.317ak.cn/api/sp/qttj",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "你的欲梦": {
+    "name": "你的欲梦",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "你的欲梦"
+    ],
+    "url": "https://api.317ak.cn/api/sp/ndym",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "萝莉系列": {
+    "name": "萝莉系列",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "萝莉系列"
+    ],
+    "url": "https://api.317ak.cn/api/sp/llxl",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "光剑变装": {
+    "name": "光剑变装",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "光剑变装"
+    ],
+    "url": "https://api.317ak.cn/api/sp/gjbz",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "完美身材": {
+    "name": "完美身材",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "完美身材"
+    ],
+    "url": "https://api.317ak.cn/api/sp/wmsc",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "火车摇系": {
+    "name": "火车摇系",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "火车摇系"
+    ],
+    "url": "https://api.317ak.cn/api/sp/hcyx",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "蹲下变装": {
+    "name": "蹲下变装",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "蹲下变装"
+    ],
+    "url": "https://api.317ak.cn/api/sp/zxbz",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "吊带系列": {
+    "name": "吊带系列",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "吊带系列"
+    ],
+    "url": "https://api.317ak.cn/api/sp/ddxl",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "擦玻璃系": {
+    "name": "擦玻璃系",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "擦玻璃系"
+    ],
+    "url": "https://api.317ak.cn/api/sp/cblx",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "黑丝视频": {
+    "name": "黑丝视频",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "黑丝视频"
+    ],
+    "url": "https://api.317ak.cn/api/sp/hssp",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "背影变装": {
+    "name": "背影变装",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "背影变装"
+    ],
+    "url": "https://api.317ak.cn/api/sp/bybz",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "御姐视频": {
+    "name": "御姐视频",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "御姐视频"
+    ],
+    "url": "https://api.317ak.cn/api/sp/yjsp",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "安慕希系": {
+    "name": "安慕希系",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "安慕希系"
+    ],
+    "url": "https://api.317ak.cn/api/sp/amxx",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "微胖系列": {
+    "name": "微胖系列",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "微胖系列"
+    ],
+    "url": "https://api.317ak.cn/api/sp/wpxl",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "硬气卡点": {
+    "name": "硬气卡点",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "硬气卡点"
+    ],
+    "url": "https://api.317ak.cn/api/sp/yqkd",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "黑白双煞": {
+    "name": "黑白双煞",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "黑白双煞"
+    ],
+    "url": "https://api.317ak.cn/api/sp/hbss",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "猫系女友": {
+    "name": "猫系女友",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "猫系女友"
+    ],
+    "url": "https://api.317ak.cn/api/sp/mxny",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "女仆系列": {
+    "name": "女仆系列",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "女仆系列"
+    ],
+    "url": "https://api.317ak.cn/api/sp/npxl",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "video"
+    }
+  },
+  "又纯又欲": {
+    "name": "又纯又欲",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "又纯又欲"
+    ],
+    "url": "https://api.317ak.cn/api/sp/ycyy",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": ""
+    }
+  },
+  "甩裙系列": {
+    "name": "甩裙系列",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "甩裙系列"
+    ],
+    "url": "https://api.317ak.cn/api/sp/sqxl",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": ""
+    }
+  },
+  "帅哥系列": {
+    "name": "帅哥系列",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "帅哥系列"
+    ],
+    "url": "https://api.317ak.cn/api/sp/sgxl",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": ""
+    }
+  },
+  "腹肌变装": {
+    "name": "腹肌变装",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "腹肌变装"
+    ],
+    "url": "https://api.317ak.cn/api/sp/fjbz",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": ""
+    }
+  },
+  "原神视频": {
+    "name": "原神视频",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "原神视频"
+    ],
+    "url": "https://api.317ak.cn/api/sp/yssp",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": ""
+    }
+  },
+  "白丝视频": {
+    "name": "白丝视频",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "白丝视频"
+    ],
+    "url": "https://api.317ak.cn/api/sp/bssp",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": ""
+    }
+  },
+  "水豚噜噜": {
+    "name": "水豚噜噜",
+    "type": "video",
+    "videoType": "video",
+    "command": [
+      "水豚噜噜"
+    ],
+    "url": "https://api.317ak.cn/api/sp/stll",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "json"
+    }
+  },
+
+
+  "星座运势": {
+    "name": "星座运势",
+    "type": "image",
+    "imageType": "image",
+    "command": [
+      "星座运势"
+    ],
+    "url": "https://api.317ak.cn/api/qtapi/xzys",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "msg": [
+        "白羊",
+        "金牛",
+        "双子",
+        "巨蟹",
+        "狮子",
+        "处女",
+        "天秤",
+        "天蝎",
+        "射手",
+        "摩羯",
+        "水瓶",
+        "双鱼"
+      ],
+      "hh": ""
+    },
+    "description": "命令格式：/星座运势-白羊"
+  },
+  "动漫头像": {
+    "name": "动漫头像",
+    "type": "image",
+    "imageType": "image",
+    "command": [
+      "动漫头像"
+    ],
+    "url": "https://api.317ak.cn/api/tp/dmtx",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": ""
+    },
+    "description": "命令格式：/动漫头像"
+  },
+  "甘城": {
+    "name": "甘城",
+    "type": "image",
+    "imageType": "image",
+    "command": [
+      "甘城"
+    ],
+    "url": "https://api.317ak.cn/api/tp/gcmm",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": ""
+    },
+    "description": "命令格式：/甘城"
+  },
+  "动漫横图": {
+    "name": "动漫横图",
+    "type": "image",
+    "imageType": "image",
+    "command": [
+      "动漫横图"
+    ],
+    "url": "https://api.317ak.cn/api/tp/dmdntp",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": ""
+    },
+    "description": "命令格式：/动漫横图"
+  },
+  "布布一二": {
+    "name": "布布一二",
+    "type": "image",
+    "imageType": "image",
+    "command": [
+      "布布一二"
+    ],
+    "url": "https://api.317ak.cn/api/tp/bbtp",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": ""
+    },
+    "description": "命令格式：/布布一二"
+  },
+  "jk": {
+    "name": "jk",
+    "type": "image",
+    "imageType": "image",
+    "command": [
+      "jk"
+    ],
+    "url": "https://api.317ak.cn/api/tp/jktp",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": ""
+    },
+    "description": "命令格式：/jk"
+  },
+  "白丝": {
+    "name": "白丝",
+    "type": "image",
+    "imageType": "image",
+    "command": [
+      "白丝"
+    ],
+    "url": "https://api.317ak.cn/api/tp/bstp",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": ""
+    },
+    "description": "命令格式：/白丝"
+  },
+  "黑丝": {
+    "name": "黑丝",
+    "type": "image",
+    "imageType": "image",
+    "command": [
+      "黑丝"
+    ],
+    "url": "https://api.317ak.cn/api/tp/hstp",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": ""
+    },
+    "description": "命令格式：/黑丝"
+  },
+  "原神图片": {
+    "name": "原神图片",
+    "type": "image",
+    "imageType": "image",
+    "command": [
+      "原神图片"
+    ],
+    "url": "https://api.317ak.cn/api/tp/ystp",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": ""
+    },
+    "description": "命令格式：/原神图片"
+  },
+
+  "原神语音": {
+    "name": "原神语音",
+    "type": "audio",
+    "audioType": "audio",
+    "command": [
+      "原神语音"
+    ],
+    "url": "https://api.317ak.cn/api/yljk/ysyyhc",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "msg": "原神启动",
+      "id": "七七",
+      "inton": 0.2,
+      "emo": 0.6,
+      "pho": 0.8,
+      "dur": 1
+    },
+    "description": "命令格式：/原神语音-角色名-合成语音文本\n例：/原神语音-神里绫华-你好我是神里绫华，你可以和我一起玩吗？\n可用角色列表：\n玛塞勒 玲可 迪奥娜 杰帕德 大毫 爱德琳 林尼 枫原万叶 阿圆 嘉良 元太 埃勒曼 「白老先生」 克列门特 卡波特 恶龙 博易 沙扎曼 哲平 白术 凝光 早柚 萨齐因 托克 纳比尔 阿尔卡米 女士 卡维 玛乔丽 深渊法师 钟离 德沃沙克 瑶瑶 安柏 伦纳德 诺艾尔 阿娜耶 珐露珊 埃德 青镞 影 海芭夏 班尼特 丹枢 「女士」 莱依拉 斯坦利 康纳 佩拉 艾莉丝 掇星攫辰天君 迪卢克 坎蒂丝 七七 银狼 景元 式大将 知易 镜流 埃洛伊 砂糖 米卡 久岐忍 瓦尔特 迪娜泽黛 纯水精灵？ 桑博 夏洛蒂 莫塞伊思 艾文 萍姥姥 艾尔海森 卡芙卡 雷泽 托马 菲米尼 慧心 荧 柯莱 香菱 绿芙蓉 菲谢尔 塞琉斯 帕斯卡 埃泽 昆钧 丹吉尔 重云 半夏 北斗 凯亚 白露 费斯曼 「博士」 符玄 岩明 斯科特 那维莱特 金人会长 埃尔欣根 莎拉 晴霓 艾伯特 螺丝咕姆 西拉杰 娜维娅 鹿野奈奈 丽莎 罗刹 「信使」 驭空 伊利亚斯 神里绫人 毗伽尔 空 阿祇 拉齐 克罗索 嘉玛 提纳里 松浦 青雀 刃 五郎 笼钓瓶一心 拉赫曼 杜拉夫 吴船长 丹恒 霄翰 长生 可莉 芙宁娜 行秋 阿洛瓦 史瓦罗 黑塔 老孟 天目十五 常九爷 娜塔莎 三月七 伊迪娅 罗莎莉亚 芭芭拉 欧菲妮 停云 珊瑚宫心海 海妮耶 阿晃 玛格丽特 妮露 优菈 羽生田千鹤 舒伯特 辛焱 迈勒斯 陆行岩本真蕈·元素生命 魈 虎克 萨赫哈蒂 埃舍尔 塔杰·拉德卡尼 彦卿 anzai 霍夫曼 「散兵」 珊瑚 公输师傅 阿守 绮良良 希儿 爱贝尔 克拉拉 宛烟 悦 明曦 恕筠 查尔斯 雷电将军 浣溪 赛诺 安西 鹿野院平藏 烟绯 温迪 云堇 旁白 天叔 蒂玛乌斯 刻晴 久利须 言笑 塞塔蕾 百闻 留云借风真君 阿贝多 柊千里 开拓者(男) 戴因斯雷布 八重神子 夜兰 阿佩普 卢卡 「大肉丸」 大慈树王 姬子 阿巴图伊 龙二 九条裟罗 佐西摩斯 琳妮特 达达利亚 博来 田铁嘴 深渊使徒 九条镰治 多莉 凯瑟琳 奥兹 阿拉夫 派蒙 希露瓦 迈蒙 布洛妮娅 阿扎尔 帕姆 阿兰 上杉 荒泷一斗 素裳 申鹤 奥列格 回声海螺 迪希雅 神里绫华 琴 浮游水蕈兽·元素生命 莺儿 巴达维 「公子」 甘雨 可可利亚 开拓者(女) 胡桃 莫娜 艾丝妲 纳西妲 石头 流浪者 宵宫"
+  },
+
+
+  "嘲讽语录": {
+    "name": "嘲讽语录",
+    "type": "text",
+    "command": [
+      "嘲讽语录"
+    ],
+    "url": "https://api.317ak.cn/api/wz/cfyl",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "json"
+    },
+    "description": "命令格式：/嘲讽语录"
+  },
+  "晚安一下": {
+    "name": "晚安一下",
+    "type": "text",
+    "command": [
+      "晚安一下"
+    ],
+    "url": "https://api.317ak.cn/api/wz/waxy",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "json"
+    },
+    "description": "命令格式：/晚安一下"
+  },
+  "早安一下": {
+    "name": "早安一下",
+    "type": "text",
+    "command": [
+      "早安一下"
+    ],
+    "url": "https://api.317ak.cn/api/wz/zaxy",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "json"
+    },
+    "description": "命令格式：/早安一下"
+  },
+  "谁是舔狗": {
+    "name": "谁是舔狗",
+    "type": "text",
+    "command": [
+      "谁是舔狗"
+    ],
+    "url": "https://api.317ak.cn/api/wz/tgrj",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "json"
+    },
+    "description": "命令格式：/谁是舔狗"
+  },
+  "一碗鸡汤": {
+    "name": "一碗鸡汤",
+    "type": "text",
+    "command": [
+      "一碗鸡汤"
+    ],
+    "url": "https://api.317ak.cn/api/wz/djtyl",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "json"
+    },
+    "description": "命令格式：/一碗鸡汤"
+  },
+  "别哭": {
+    "name": "别哭",
+    "type": "text",
+    "command": [
+      "别哭"
+    ],
+    "url": "https://api.317ak.cn/api/wz/awyl",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "json"
+    },
+    "description": "命令格式：/别哭"
+  },
+  "QQ签名": {
+    "name": "QQ签名",
+    "type": "text",
+    "command": [
+      "QQ签名"
+    ],
+    "url": "https://api.317ak.cn/api/wz/QQqm",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "json"
+    },
+    "description": "命令格式：/QQ签名"
+  },
+  "打听社会": {
+    "name": "打听社会",
+    "type": "text",
+    "command": [
+      "打听社会"
+    ],
+    "url": "https://api.317ak.cn/api/wz/shyl",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "json"
+    },
+    "description": "命令格式：/打听社会"
+  },
+  "巨人轻语": {
+    "name": "巨人轻语",
+    "type": "text",
+    "command": [
+      "巨人轻语"
+    ],
+    "url": "https://api.317ak.cn/api/wz/jryl",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "json"
+    },
+    "description": "命令格式：/巨人轻语"
+  },
+  "诗词": {
+    "name": "诗词",
+    "type": "text",
+    "command": [
+      "诗词"
+    ],
+    "url": "https://api.317ak.cn/api/wz/scyl",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": "",
+      "type": "json"
+    },
+    "description": "命令格式：/诗词"
+  }
+}
