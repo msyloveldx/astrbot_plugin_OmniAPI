@@ -173,7 +173,7 @@ class Main(Star):
         idList = [5,6,7,9,10,11,12,13,14,15,16,18,22,26,30,35,36]
         id_4k = random.choice(idList)
         params = {
-            "ckey": "LCW4HP76R9LKRWXCEMAX",
+            "ckey": self.api_manager.get_ckey(),
             "count": "1",
             "id": f"{id_4k}",
             # "id": "36",
