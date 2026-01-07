@@ -2,7 +2,7 @@
   "随机视频": {
     "name": "随机视频",
     "type": "video",
-    "videoType": "video",
+    "videoType": "url",
     "command": [
       "随机视频"
     ],
@@ -211,7 +211,7 @@
   "奶白奈奈": {
     "name": "奶白奈奈",
     "type": "video",
-    "videoType": "video",
+    "videoType": "url",
     "command": [
       "奶白奈奈"
     ],
@@ -221,7 +221,7 @@
     },
     "params": {
       "ckey": "",
-      "type": "video"
+      "type": "json"
     }
   },
   "怼脸自拍": {
@@ -723,7 +723,7 @@
   "甜妹系列": {
     "name": "甜妹系列",
     "type": "video",
-    "videoType": "video",
+    "videoType": "url",
     "command": [
       "甜妹系列"
     ],
@@ -733,7 +733,7 @@
     },
     "params": {
       "ckey": "",
-      "type": "video"
+      "type": "json"
     }
   },
   "清纯系列": {
@@ -947,7 +947,7 @@
   "黑丝视频": {
     "name": "黑丝视频",
     "type": "video",
-    "videoType": "video",
+    "videoType": "url",
     "command": [
       "黑丝视频"
     ],
@@ -957,7 +957,7 @@
     },
     "params": {
       "ckey": "",
-      "type": "video"
+      "type": "json"
     }
   },
   "背影变装": {
@@ -1166,7 +1166,7 @@
   "白丝视频": {
     "name": "白丝视频",
     "type": "video",
-    "videoType": "video",
+    "videoType": "url",
     "command": [
       "白丝视频"
     ],
@@ -1175,13 +1175,14 @@
       "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
     },
     "params": {
-      "ckey": ""
+      "ckey": "",
+      "type": "json"
     }
   },
   "水豚噜噜": {
     "name": "水豚噜噜",
     "type": "video",
-    "videoType": "video",
+    "videoType": "url",
     "command": [
       "水豚噜噜"
     ],

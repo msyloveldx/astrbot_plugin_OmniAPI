@@ -6,9 +6,9 @@ from astrbot.api import logger
 from astrbot.api.message_components import Video, Plain, At, Record, Image
 import httpx
 
-from .astrbot_help_generator import generate_help_image
 from .core.apiManager import APIManager
 from .core.apiHandle import APIHandle
+from .astrbot_help_generator import generate_help_image, OUTPUT_IMAGE
 
 @register("astrbot_plugin_OmniAPI", "msyloveldx", "AstrBotOmniAPI 多模态娱乐，通过指令获取API的图片、文字、视频等内容并发送。",
           "v1.1.0")
@@ -222,8 +222,8 @@ class Main(Star):
             yield event.plain_result("暂无可用指令")
             return
 
-        help_text = "🌟 可用指令:\n"
-        help_text += "──────────────\n"
+        # Generate help text in Markdown format
+        help_text = "## 🌟 可用指令\n\n"
 
         # 按API分组显示命令
         api_commands = {}
@@ -235,22 +235,24 @@ class Main(Star):
             api_commands[api_name].append((cmd, description))
 
         for api_name, cmds_and_descs in api_commands.items():
-            help_text += f"🎬 {api_name}:\n"
+            help_text += f"### 🎬 {api_name}\n\n"
             for cmd, desc in cmds_and_descs:
                 if desc:
-                    help_text += f"  • {cmd} — {desc}\n"
+                    help_text += f"- /{cmd} — {desc}\n"
                 else:
-                    help_text += f"  • {cmd}\n"
+                    help_text += f"- /{cmd}\n"
+            help_text += "\n"
 
-        help_text += "──────────────\n"
+        help_text += "---\n\n"
         help_text += "发送指令即可获取对应视频内容"
+
         # help_image = await self.text_to_image(help_text)
         # yield event.image_result(help_image)
-        # yield event.plain_result(help_text)
+        yield event.plain_result(help_text)
 
-        generate_help_image(help_text, "data/help_cmd.png")
+        generate_help_image(help_text, OUTPUT_IMAGE)
         chain = [
             # At(qq=event.get_sender_id()),
-            Image.fromFileSystem("data/help_cmd.png")
+            Image.fromFileSystem(OUTPUT_IMAGE)
         ]
         yield event.chain_result(chain)

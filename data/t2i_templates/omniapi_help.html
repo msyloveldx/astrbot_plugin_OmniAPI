@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>AstrBot OmniAPI 帮助</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/common.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"
+      onload="renderMathInElement(document.getElementById('content'),{delimiters: [{left: '$$', right: '$$', display: true},{left: '$', right: '$', display: false}]});"></script>
+  <style>
+    /* Color palette matching PIL implementation */
+    :root {
+      --bg-color: #fafaff;
+      --title-color: #0052ff;
+      --category-color: #0078c8;
+      --command-color: #323246;
+      --text-color: #1e1e32;
+      --separator-color: #b4b4dc;
+    }
+
+    /* Cross-platform font stack */
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", "微软雅黑", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans CN", "WenQuanYi Micro Hei", sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      font-size: 20px;
+      width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Title section - matching PIL draw.text((40, 20), "# AstrBotOmniAPI指令大全", fill=TITLE_COLOR, font=title_font) */
+    .header {
+      padding: 20px 40px 20px 40px;
+      margin-top: 0;
+    }
+
+    .title {
+      font-size: 36px;
+      font-weight: bold;
+      color: var(--title-color);
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    /* Content area */
+    .content {
+      padding: 0 40px 20px 40px;
+    }
+
+    /* Category headers - matching draw.text((40, y_offset), cat_text, fill=CATEGORY_COLOR, font=category_font) */
+    h2 {
+      font-size: 24px;
+      color: var(--category-color);
+      margin: 30px 0 10px 0;
+      padding: 0;
+      border: none;
+      line-height: 1.3;
+      font-weight: bold;
+    }
+
+    /* Override h2::before from markdown */
+    h2::before {
+      content: none;
+    }
+
+    /* Command list - matching draw.text((60, y_offset), line, fill=COMMAND_COLOR, font=command_font) */
+    ul, ol {
+      padding-left: 20px;
+      margin: 0 0 15px 0;
+    }
+
+    li {
+      margin: 0 0 8px 0;
+      line-height: 1.5;
+      font-size: 20px;
+      color: var(--command-color);
+    }
+
+    /* Remove default bullet and use custom */
+    ul li {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li::before {
+      content: "•";
+      margin-right: 8px;
+      color: var(--command-color);
+    }
+
+    /* Separator line - matching draw.line([(40, y_offset - 5), (max_width - 40, y_offset - 5)], fill=SEPARATOR_COLOR, width=2) */
+    hr {
+      border: none;
+      border-top: 2px solid var(--separator-color);
+      margin: 30px 0 10px 0;
+    }
+
+    /* Footer text - matching draw.text((40, y_offset), footer, fill=TEXT_COLOR, font=footer_font) */
+    .footer {
+      font-size: 18px;
+      color: var(--text-color);
+      margin-top: 10px;
+      line-height: 1.5;
+    }
+
+    /* Override markdown styles to match our design */
+    h1, h3, h4, h5, h6 {
+      display: none;
+    }
+
+    p {
+      margin: 0 0 10px 0;
+      font-size: 20px;
+      color: var(--text-color);
+    }
+
+    strong {
+      color: var(--command-color);
+      font-weight: bold;
+    }
+
+    /* Ensure emojis render properly */
+    .emoji {
+      display: inline-block;
+      margin-right: 4px;
+    }
+
+    #content {
+      min-width: auto;
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1 class="title"># AstrBotOmniAPI指令大全</h1>
+  </div>
+
+  <div class="content" id="content"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    document.getElementById('content').innerHTML = marked.parse(`{{ text | safe }}`);
+  </script>
+</body>
+</html>

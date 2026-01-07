@@ -150,9 +150,9 @@ class RequestManager:
                     return None
 
                 logger.info(resp.json())
-                temp_path = resp.json()["data"]
+                video_url = resp.json()["data"]
 
-                return temp_path
+                return video_url
         except Exception as e:
             logger.error(f"视频下载异常: {str(e)}")
             return None
@@ -231,21 +231,16 @@ class RequestManager:
 
         try:
             async with httpx.AsyncClient(timeout=30.0) as client:
-                async with client.stream("GET", url, headers=headers, params=params) as resp:
-                    if resp.status_code != 200:
-                        logger.error(f"视频下载失败，状态码: {resp.status_code}")
-                        return None
+                # ✅ 正确：直接 await get，不要 async with
+                resp = await client.get(url, headers=headers, params=params)
+                if resp.status_code != 200:
+                    logger.error(f"视频下载失败，状态码: {resp.status_code}")
+                    return None
 
-                    # 创建临时 .mp4 文件
-                    with tempfile.NamedTemporaryFile(delete=False, suffix=".mp4") as tmp:
-                        temp_path = tmp.name
+                logger.info(resp.json())
+                video_url = resp.json()["data"]
 
-                    with open(temp_path, "wb") as f:
-                        async for chunk in resp.aiter_bytes(8192):
-                            f.write(chunk)
-
-                    logger.info(f"视频下载成功，临时文件: {temp_path}")
-                    return temp_path
+                return video_url
         except Exception as e:
             logger.error(f"视频下载异常: {str(e)}")
             return None

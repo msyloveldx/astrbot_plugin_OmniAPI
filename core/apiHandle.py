@@ -116,10 +116,10 @@ class APIHandle:
                 return
 
             # 下载视频
-            if name == "随机视频":
-                temp_path = await self.request.get_random_video(url, headers=headers, params=params)
-            else:
-                temp_path = await self.request.get_video(url, headers=headers, params=params)
+            # if name == "随机视频":
+            #     temp_path = await self.request.get_random_video(url, headers=headers, params=params)
+            # else:
+            temp_path = await self.request.get_video(url, headers=headers, params=params)
             if not temp_path or not os.path.exists(temp_path):
                 yield event.plain_result(f"{api_config.get("name", "")}视频下载失败或文件不存在")
                 return
@@ -158,7 +158,8 @@ class APIHandle:
         logger.info(f"{api_config.get("name", "")}为url视频类型，使用get_video_url函数下载")
 
         try:
-            # 获取URL和参数
+            # 获取URL和参数\
+            name = api_config.get("name", "")
             url = api_config.get("url", "").strip()
             headers = api_config.get("headers", {})
             params = api_config.get("params", {})
@@ -168,7 +169,10 @@ class APIHandle:
                 return
 
             # 获取视频URL
-            video_url = await self.request.get_video_url(url, headers=headers, params=params)
+            if name == "随机视频":
+                video_url = await self.request.get_random_video(url, headers=headers, params=params)
+            else:
+                video_url = await self.request.get_video_url(url, headers=headers, params=params)
             if not video_url:
                 yield event.plain_result(f"获取{api_config.get("name", "")}视频URL失败")
                 return
