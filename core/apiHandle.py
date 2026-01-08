@@ -40,7 +40,7 @@ class APIHandle:
 
         except Exception as e:
             logger.error(f"处理{api_config.get('name', '')}text类型失败: {str(e)}", exc_info=True)
-            yield event.plain_result(f"❌ {api_config.get("name", "")}文本处理失败: {str(e)}")
+            yield event.plain_result(f"❌ {api_config.get('name', '')}文本处理失败: {str(e)}")
 
 
     async def handle_audio_type(self, api_config: dict, event: AstrMessageEvent):
@@ -68,7 +68,7 @@ class APIHandle:
             # 下载语音
             temp_path = await self.request.get_audio_url(url, headers=headers, params=params, role=role, msg=msg)
             if not temp_path or not os.path.exists(temp_path):
-                yield event.plain_result(f"{api_config.get("name", "")}语音下载失败或文件不存在")
+                yield event.plain_result(f"{api_config.get('name', '')}语音下载失败或文件不存在")
                 return
 
             # 统一路径格式
@@ -81,11 +81,11 @@ class APIHandle:
                 Record(file=temp_path),
             ]
             yield event.chain_result(chain)
-            logger.info(f"{api_config.get("name", "")}语音发送成功: {temp_path}")
+            logger.info(f"{api_config.get('name', '')}语音发送成功: {temp_path}")
 
         except Exception as e:
-            logger.error(f"处理{api_config.get("name", "")}audio类型失败: {str(e)}", exc_info=True)
-            yield event.plain_result(f"❌ {api_config.get("name", "")}语音处理失败: {str(e)}")
+            logger.error(f"处理{api_config.get('name', '')}audio类型失败: {str(e)}", exc_info=True)
+            yield event.plain_result(f"❌ {api_config.get('name', '')}语音处理失败: {str(e)}")
         finally:
             # 清理临时文件
             if 'temp_path' in locals() and temp_path and os.path.exists(temp_path):
@@ -102,7 +102,7 @@ class APIHandle:
             yield event.plain_result("暂未开启视频API功能")
             return
 
-        logger.info(f"{api_config.get("name", "")}为video视频类型，使用get_video函数下载")
+        logger.info(f"{api_config.get('name', '')}为video视频类型，使用get_video函数下载")
 
         try:
             # 获取URL和参数
@@ -121,7 +121,7 @@ class APIHandle:
             # else:
             temp_path = await self.request.get_video(url, headers=headers, params=params)
             if not temp_path or not os.path.exists(temp_path):
-                yield event.plain_result(f"{api_config.get("name", "")}视频下载失败或文件不存在")
+                yield event.plain_result(f"{api_config.get('name', '')}视频下载失败或文件不存在")
                 return
 
             # 统一路径格式
@@ -134,11 +134,11 @@ class APIHandle:
                 Video.fromFileSystem(path=str(temp_path)),
             ]
             yield event.chain_result(chain)
-            logger.info(f"{api_config.get("name", "")}视频发送成功: {temp_path}")
+            logger.info(f"{api_config.get('name', '')}视频发送成功: {temp_path}")
 
         except Exception as e:
-            logger.error(f"处理{api_config.get("name", "")}video类型失败: {str(e)}", exc_info=True)
-            yield event.plain_result(f"❌ {api_config.get("name", "")}视频处理失败: {str(e)}")
+            logger.error(f"处理{api_config.get('name', '')}video类型失败: {str(e)}", exc_info=True)
+            yield event.plain_result(f"❌ {api_config.get('name', '')}视频处理失败: {str(e)}")
         finally:
             # 清理临时文件
             if 'temp_path' in locals() and temp_path and os.path.exists(temp_path):
@@ -155,7 +155,7 @@ class APIHandle:
             yield event.plain_result("暂未开启视频API功能")
             return
 
-        logger.info(f"{api_config.get("name", "")}为url视频类型，使用get_video_url函数下载")
+        logger.info(f"{api_config.get('name', '')}为url视频类型，使用get_video_url函数下载")
 
         try:
             # 获取URL和参数\
@@ -174,7 +174,7 @@ class APIHandle:
             else:
                 video_url = await self.request.get_video_url(url, headers=headers, params=params)
             if not video_url:
-                yield event.plain_result(f"获取{api_config.get("name", "")}视频URL失败")
+                yield event.plain_result(f"获取{api_config.get('name', '')}视频URL失败")
                 return
 
             # 发送视频URL
@@ -184,11 +184,11 @@ class APIHandle:
                 Video.fromURL(url=str(video_url))
             ]
             yield event.chain_result(chain)
-            logger.info(f"{api_config.get("name", "")}URL发送成功: {video_url}")
+            logger.info(f"{api_config.get('name', '')}URL发送成功: {video_url}")
 
         except Exception as e:
-            logger.error(f"{api_config.get("name", "")}url处理失败: {str(e)}", exc_info=True)
-            yield event.plain_result(f"❌ {api_config.get("name", "")}URL处理失败: {str(e)}")
+            logger.error(f"{api_config.get('name', '')}url处理失败: {str(e)}", exc_info=True)
+            yield event.plain_result(f"❌ {api_config.get('name', '')}URL处理失败: {str(e)}")
 
 
     async def handle_image_type(self, api_config: dict, event: AstrMessageEvent):
@@ -197,7 +197,7 @@ class APIHandle:
             yield event.plain_result("暂未开启图片API功能")
             return
 
-        logger.info(f"{api_config.get("name", "")}为图片类型，使用get_image_url函数下载")
+        logger.info(f"{api_config.get('name', '')}为图片类型，使用get_image_url函数下载")
 
         try:
             # 获取URL和参数
@@ -229,11 +229,11 @@ class APIHandle:
                 Image.fromFileSystem(path=str(temp_path))
             ]
             yield event.chain_result(chain)
-            logger.info(f"{api_config.get("name", "")}发送成功: {temp_path}")
+            logger.info(f"{api_config.get('name', '')}发送成功: {temp_path}")
 
         except Exception as e:
-            logger.error(f"{api_config.get("name", "")}处理失败: {str(e)}", exc_info=True)
-            yield event.plain_result(f"❌ {api_config.get("name", "")}处理失败: {str(e)}")
+            logger.error(f"{api_config.get('name', '')}处理失败: {str(e)}", exc_info=True)
+            yield event.plain_result(f"❌ {api_config.get('name', '')}处理失败: {str(e)}")
 
 
     async def handle_image_url_type(self, api_config: dict, event: AstrMessageEvent):
@@ -242,7 +242,7 @@ class APIHandle:
             yield event.plain_result("暂未开启图片API功能")
             return
 
-        logger.info(f"{api_config.get("name", "")}为图片类型，使用get_image_url函数下载")
+        logger.info(f"{api_config.get('name', '')}为图片类型，使用get_image_url函数下载")
 
         try:
             # 获取URL和参数
@@ -270,8 +270,8 @@ class APIHandle:
                 Image.fromURL(url=str(image_url))
             ]
             yield event.chain_result(chain)
-            logger.info(f"{api_config.get("name", "")}URL发送成功: {image_url}")
+            logger.info(f"{api_config.get('name', '')}URL发送成功: {image_url}")
 
         except Exception as e:
-            logger.error(f"{api_config.get("name", "")}url处理失败: {str(e)}", exc_info=True)
-            yield event.plain_result(f"❌ {api_config.get("name", "")}URL处理失败: {str(e)}")
+            logger.error(f"{api_config.get('name', '')}url处理失败: {str(e)}", exc_info=True)
+            yield event.plain_result(f"❌ {api_config.get('name', '')}URL处理失败: {str(e)}")
