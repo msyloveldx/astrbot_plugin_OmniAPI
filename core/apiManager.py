@@ -14,14 +14,14 @@ class APIManager:
     def _init_apis(self) -> Dict[str, Dict[str, Any]]:
         """初始化API配置"""
         # 读取JSON文件
-        with open('data/plugins/astrbot_plugin_OmniAPI/plugin_apis.json', 'r', encoding='utf-8') as file:
+        with open('data/plugins/astrbot_plugin_omniapi/plugin_apis.json', 'r', encoding='utf-8') as file:
             apis = json.load(file)
         return apis
 
     def get_system_config(self) -> Dict[str, Dict[str, Any]]:
         """获取系统配置"""
         # 读取JSON文件
-        with open('data/config/astrbot_plugin_OmniAPI_config.json', 'r', encoding='utf-8-sig') as file:
+        with open('data/config/astrbot_plugin_omniapi_config.json', 'r', encoding='utf-8-sig') as file:
             config = json.load(file)
         return config
 
