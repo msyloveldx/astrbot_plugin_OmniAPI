@@ -39,7 +39,7 @@ class APIHandle:
             yield event.plain_result(text)
 
         except Exception as e:
-            logger.error(f"处理{api_config.get("name", "")}text类型失败: {str(e)}", exc_info=True)
+            logger.error(f"处理{api_config.get('name', '')}text类型失败: {str(e)}", exc_info=True)
             yield event.plain_result(f"❌ {api_config.get("name", "")}文本处理失败: {str(e)}")
 
 
