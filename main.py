@@ -248,7 +248,7 @@ class Main(Star):
 
         # help_image = await self.text_to_image(help_text)
         # yield event.image_result(help_image)
-        yield event.plain_result(help_text)
+        # yield event.plain_result(help_text)
 
         generate_help_image(help_text, OUTPUT_IMAGE)
         chain = [

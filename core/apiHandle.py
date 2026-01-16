@@ -258,7 +258,12 @@ class APIHandle:
                 return
 
             # 获取图片URL
-            image_url = await self.request.get_image_url(url, headers=headers, params=params, msg=msg)
+            # 判断是否为生图
+            if message_str.split("-")[0] == "生图":
+                logger.info("使用魔搭Z-Image-Turbo生图API")
+                image_url = await self.request.get_generate_image_url(url, headers=headers, params=params, msg=msg)
+            else:
+                image_url = await self.request.get_image_url(url, headers=headers, params=params, msg=msg)
             if not image_url:
                 yield event.plain_result("获取图片URL失败")
                 return

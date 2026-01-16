@@ -1,6 +1,11 @@
 import random
 import httpx
 import tempfile
+import requests
+import time
+import json
+from PIL import Image
+from io import BytesIO
 from typing import Tuple, Optional, Dict, Any
 
 from astrbot.api import logger
@@ -197,9 +202,9 @@ class RequestManager:
                     return None
 
                 logger.info(resp.json())
-                temp_path = resp.json()["data"]
+                image_url = resp.json()["data"]
 
-                return temp_path
+                return image_url
         except Exception as e:
             logger.error(f"图片下载异常: {str(e)}")
             return None
@@ -221,7 +226,7 @@ class RequestManager:
             "晴川林子", "派大萱系", "江寻千系", "圆一依系", "白可歪歪", "突突萌娃"
         ]
         params = {
-            "ckey": "LCW4HP76R9LKRWXCEMAX",
+            "ckey": "",
             "msg": f"{random.choices(random_list)}",
             "type": "json",
             "lb": ""
@@ -243,6 +248,66 @@ class RequestManager:
                 return video_url
         except Exception as e:
             logger.error(f"视频下载异常: {str(e)}")
+            return None
+
+
+    async def generate_image(self, base_url: str,prompt: str):
+        """基于魔搭的Z-Image-Turbo模型生图，2000次/日"""
+        # 获取api_key
+        api_key = self.api_manager.get_modelscope_key()
+
+        common_headers = {
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+        }
+
+        response = requests.post(
+            f"{base_url}v1/images/generations",
+            headers={**common_headers, "X-ModelScope-Async-Mode": "true"},
+            data=json.dumps({
+                "model": "Tongyi-MAI/Z-Image-Turbo",  # ModelScope Model-Id, required
+                # "loras": "<lora-repo-id>", # optional lora(s)
+                # """
+                # LoRA(s) Configuration:
+                # - for Single LoRA:
+                #   "loras": "<lora-repo-id>"
+                # - for Multiple LoRAs:
+                #   "loras": {"<lora-repo-id1>": 0.6, "<lora-repo-id2>": 0.4}
+                # - Upto 6 LoRAs, all weight-coefficients must sum to 1.0
+                # """
+                "prompt": f"{prompt}"
+            }, ensure_ascii=False).encode('utf-8')
+        )
+
+        response.raise_for_status()
+        task_id = response.json()["task_id"]
+
+        while True:
+            result = requests.get(
+                f"{base_url}v1/tasks/{task_id}",
+                headers={**common_headers, "X-ModelScope-Task-Type": "image_generation"},
+            )
+            result.raise_for_status()
+            data = result.json()
+
+            if data["task_status"] == "SUCCEED":
+                return data
+            elif data["task_status"] == "FAILED":
+                print("Image Generation Failed.")
+                return None
+
+            time.sleep(1)
+
+    async def get_generate_image_url(self, url: str, headers: Dict[str, str], params: Dict[str, str], msg: str) -> str | None:
+        """下载图片，返回临时文件路径"""
+        try:
+            data = await self.generate_image(url, msg)
+            logger.info(data)
+            image_url = data["output_images"][0]
+
+            return image_url
+        except Exception as e:
+            logger.error(f"图片下载异常: {str(e)}")
             return None
 
     async def terminate(self):

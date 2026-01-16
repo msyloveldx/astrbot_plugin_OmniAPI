@@ -1,17 +1,36 @@
 from PIL import Image, ImageDraw, ImageFont
 import textwrap
 import os
+import platform
 
 from astrbot import logger
 
 # ================== 配置区 ==================
-# 替换为你自己的字体路径（支持中文）
-# Windows 示例: "C:/Windows/Fonts/msyh.ttc"
-# Mac 示例: "/System/Library/Fonts/PingFang.ttc"
-# Linux 示例: "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"（需中文字体）
-FONT_PATH = "C:/Windows/Fonts/msyh.ttc"  # 请根据你的系统修改！
+# 字体路径配置（根据系统自动选择）
+def get_font_path():
+    system = platform.system()
+    if system == "Windows":
+        return "C:/Windows/Fonts/msyh.ttc"
+    elif system == "Darwin":  # macOS
+        return "/System/Library/Fonts/PingFang.ttc"
+    else:  # Linux/Docker
+        # 用户上传的字体路径
+        user_font = "/usr/share/fonts/chinese/msyh.ttc"
+        if os.path.exists(user_font):
+            return user_font
+        # 备选路径
+        font_paths = [
+            "/usr/share/fonts/chinese/MSYH.TTC",
+            "/usr/share/fonts/chinese/SIMSUN.TTC",
+        ]
+        for path in font_paths:
+            if os.path.exists(path):
+                return path
+        return None
 
-OUTPUT_IMAGE = "data/plugins/astrbot_plugin_OmniAPI/data/help_cmd.png"
+FONT_PATH = get_font_path()
+
+OUTPUT_IMAGE = "data/plugins/astrbot_plugin_omniapi/data/help_cmd.png"
 
 # 颜色配置
 BG_COLOR = (250, 250, 255)  # 背景：浅蓝白
@@ -29,48 +48,56 @@ FOOTER_FONT_SIZE = 18
 
 
 # ===========================================
-
 def get_font(size):
-    try:
-        return ImageFont.truetype(FONT_PATH, size)
-    except OSError:
-        print(f"⚠️ 字体文件未找到: {FONT_PATH}")
-        print("使用默认字体（可能不支持中文）")
-        return ImageFont.load_default()
+    if FONT_PATH:
+        try:
+            font = ImageFont.truetype(FONT_PATH, size)
+            logger.info(f"✅ 使用字体: {FONT_PATH}")
+            return font
+        except OSError:
+            logger.warning(f"⚠️ 字体加载失败: {FONT_PATH}")
+    logger.warning("⚠️ 使用默认字体（可能不支持中文）")
+    return ImageFont.load_default()
 
 
 def parse_commands(raw_text: str):
     """
-    简单解析指令文本，按分类分组
-    输入：原始文本（含 🎬 🎙️ 等 emoji）
-    输出：[{"type": "视频", "lines": [...], "icon": "🎬"}, ...]
+    解析Markdown格式的指令文本
+    输出：[{"type": "分类名", "icon": "图标", "lines": [...]}]
     """
     lines = [line.strip() for line in raw_text.strip().split("\n") if line.strip()]
     categories = []
     current_cat = {"type": "通用", "icon": "•", "lines": []}
 
     for line in lines:
-        if "视频指令" in line:
+        # 检测标题行（以 ### 开头）
+        if line.startswith("### "):
             if current_cat["lines"]:
                 categories.append(current_cat)
-            current_cat = {"type": "视频", "icon": "🎬", "lines": []}
-        elif "语音指令" in line:
+            # 提取分类名，去除图标
+            title = line.replace("### ", "").strip()
+            if "🎬" in title:
+                icon = "🎬"
+            elif "🎤" in title:
+                icon = "🎤"
+            elif "🖼️" in title:
+                icon = "🖼️"
+            elif "🎵" in title:
+                icon = "🎵"
+            else:
+                icon = "📋"
+            current_cat = {"type": title, "icon": icon, "lines": []}
+        # 检测列表项（以 - 开头）
+        elif line.startswith("- "):
+            current_cat["lines"].append(line)
+        # 分隔线
+        elif line.startswith("---"):
             if current_cat["lines"]:
                 categories.append(current_cat)
-            current_cat = {"type": "语音", "icon": "🎤", "lines": []}
-        elif "图片指令" in line:
-            if current_cat["lines"]:
-                categories.append(current_cat)
-            current_cat = {"type": "图片", "icon": "🖼️", "lines": []}
-        elif "其他指令" in line or "————————" in line:
-            if current_cat["lines"]:
-                categories.append(current_cat)
-            current_cat = {"type": "其他", "icon": "⚙️", "lines": []}
-            break  # 后续为页脚
-        else:
-            # 提取指令行（如 "• 随机视频"）
-            if "•" in line and not line.startswith("🌟"):
-                current_cat["lines"].append(line)
+            current_cat = {"type": "其他", "icon": "•", "lines": []}
+        # 跳过Markdown标题标记
+        elif line.startswith("## ") or line.startswith("# "):
+            continue
 
     if current_cat["lines"]:
         categories.append(current_cat)
@@ -78,8 +105,8 @@ def parse_commands(raw_text: str):
     # 页脚
     footer = ""
     for line in lines:
-        if "————————" in line:
-            footer = line.replace("——————————————", "").strip()
+        if "发送指令" in line:
+            footer = line.strip()
             break
 
     return categories, footer
@@ -99,45 +126,47 @@ def generate_help_image(raw_text: str, output_path: str):
     max_width = 800  # 固定宽度（适合手机查看）
 
     for cat in categories:
-        total_height += 30  # 分类标题
+        total_height += 35  # 分类标题
         for cmd in cat["lines"]:
-            wrapped = textwrap.wrap(cmd, width=38)  # 每行约38字
-            total_height += len(wrapped) * (COMMAND_FONT_SIZE + 8)
-        total_height += 15  # 分类间距
+            wrapped = textwrap.wrap(cmd, width=35)  # 每行约35字
+            total_height += len(wrapped) * (COMMAND_FONT_SIZE + 10)
+        total_height += 20  # 分类间距
 
-    total_height += 50  # 页脚 + 底部留白
+    total_height += 60  # 页脚 + 底部留白
 
     # 创建画布
-    image = Image.new("RGB", (max_width, total_height), BG_COLOR)
+    image = Image.new("RGB", (max_width, max(total_height, 400)), BG_COLOR)
     draw = ImageDraw.Draw(image)
 
     # 绘制标题
-    draw.text((40, 20), "# AstrBotOmniAPI 指令大全", fill=TITLE_COLOR, font=title_font)
+    draw.text((40, 20), "🌟 AstrBotOmniAPI 指令列表", fill=TITLE_COLOR, font=title_font)
 
-    y_offset = 80
+    y_offset = 70
 
     # 绘制每个分类
     for cat in categories:
         if not cat["lines"]:
             continue
 
-        # 分类标题（带图标）
-        cat_text = f"{cat['icon']} {cat['type']}指令"
+        # 分类标题
+        cat_text = f"{cat['icon']} {cat['type']}"
         draw.text((40, y_offset), cat_text, fill=CATEGORY_COLOR, font=category_font)
         y_offset += 35
 
         # 指令列表
         for cmd in cat["lines"]:
-            wrapped_lines = textwrap.wrap(cmd, width=38)
+            # 移除列表标记 "- "
+            cmd_clean = cmd.replace("- ", "", 1)
+            wrapped_lines = textwrap.wrap(cmd_clean, width=35)
             for line in wrapped_lines:
-                draw.text((60, y_offset), line, fill=COMMAND_COLOR, font=command_font)
-                y_offset += COMMAND_FONT_SIZE + 8
-        y_offset += 10  # 分类间空隙
+                draw.text((50, y_offset), line, fill=COMMAND_COLOR, font=command_font)
+                y_offset += COMMAND_FONT_SIZE + 10
+        y_offset += 15  # 分类间空隙
 
     # 绘制页脚
     if footer:
-        draw.line([(40, y_offset - 5), (max_width - 40, y_offset - 5)], fill=SEPARATOR_COLOR, width=2)
-        y_offset += 10
+        draw.line([(40, y_offset), (max_width - 40, y_offset)], fill=SEPARATOR_COLOR, width=2)
+        y_offset += 15
         draw.text((40, y_offset), footer, fill=TEXT_COLOR, font=footer_font)
 
     # 保存
@@ -148,9 +177,20 @@ def generate_help_image(raw_text: str, output_path: str):
 
 # ================== 使用示例 ==================
 if __name__ == "__main__":
-    # 🔻 请在此处粘贴你从 AstrBot 获取的完整指令文本 🔻
-    HELP_TEXT = """
-🌟 可用视频指令: —————————————————— 🎬 随机视频: • 随机视频 🎬 did: • did 🎬 男大: • 男大 • 帅哥 🎬 久喵系列: • 久喵系列 🎬 仙桃猫系: • 仙桃猫系 🎬 大雷系列: • 大雷系列 🎬 三梦奇缘: • 三梦奇缘 🎬 酒仙系列: • 酒仙系列 🎬 河南男大: • 河南男大 🎬 听泉鉴宝: • 听泉鉴宝 • 鉴宝 🎬 半佛仙人: • 半佛仙人 🎬 慧慧是猪猪: • 慧慧是猪猪 🎬 二饼: • 二饼 🎬 小潮: • 小潮 🎬 小潮team: • 小潮team 🎬 三梦: • 三梦 🎬 三梦奇缘: • 三梦奇缘 🎬 三梦视频: • 三梦视频 🎬 胡凯文: • 胡凯文 🎬 胡凯文系列: • 胡凯文系列 🎬 胡凯文搞笑: • 胡凯文搞笑 🎬 胡凯文模仿: • 胡凯文模仿 🎬 胡凯文合集: • 胡凯文合集 🎬 胡凯文直播: • 胡凯文直播 🎬 胡凯文视频: • 胡凯文视频 🎬 胡凯文搞笑视频: • 胡凯文搞笑视频 🎬 胡凯文模仿秀: • 胡凯文模仿秀 🎬 胡凯文搞笑模仿: • 胡凯文搞笑模仿 🎬 胡凯文搞笑合集: • 胡凯文搞笑合集 🎬 胡凯文直播回放: • 胡凯文直播回放 🎬 胡凯文视频合集: • 胡凯文视频合集 —————————————— 发送指令即可获取对应视频内容
+    HELP_TEXT = """## 🌟 可用指令
+
+### 🎬 随机视频
+- /随机视频
+- /did
+- /男大
+
+### 🎬 听泉鉴宝
+- /听泉鉴宝
+- /鉴宝
+
+---
+
+发送指令即可获取对应内容
 """
 
     generate_help_image(HELP_TEXT, OUTPUT_IMAGE)

@@ -1540,5 +1540,21 @@
       "type": "json"
     },
     "description": "命令格式：/诗词"
+  },
+  "生图": {
+    "name": "生图",
+    "type": "image",
+    "imageType": "url",
+    "command": [
+      "生图"
+    ],
+    "url": "https://api-inference.modelscope.cn/",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    },
+    "params": {
+      "ckey": ""
+    },
+    "description": "命令格式：/生图"
   }
 }

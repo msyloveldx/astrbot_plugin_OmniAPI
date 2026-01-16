@@ -30,6 +30,11 @@ class APIManager:
         ckey = self.get_system_config().get("api_keys")
         return ckey
 
+    def get_modelscope_key(self) -> str:
+        """获取API的CKEY"""
+        api_key = self.get_system_config().get("modelscope_keys")
+        return api_key
+
     def get_enable_text(self):
         """获取文本开关配置"""
         return self.get_system_config().get("enable_text")

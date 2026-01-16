@@ -25,5 +25,12 @@
     "type": "string",
     "default": "",
     "obvious_hint": true
+  },
+  "modelscope_keys": {
+    "description": "api密钥",
+    "hint": "请在https://modelscope.cn/my/myaccesstoken网站注册账号拿到密钥后填在此配置项中",
+    "type": "string",
+    "default": "",
+    "obvious_hint": true
   }
 }
